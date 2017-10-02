@@ -9,5 +9,10 @@ class MP3Importer
       path.split("/").pop
     end
   end
+  def import
+    files.each do |file|
+      Song.new_by_filename(file)
+    end    
+  end
 
 end
