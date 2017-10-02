@@ -5,7 +5,6 @@ class MP3Importer
     @path = path
   end
   def files
-    binding.pry
     Dir.glob("#{@path}/*").collect do |path|
       path.split("/").pop
     end
